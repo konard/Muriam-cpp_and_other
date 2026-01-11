@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация о городах Новой Зеландии</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Выберите город</h1>
+        
+        <div class="main-content">
+            <!-- Левый блок с чекбоксами в рамке -->
+            <div class="checkbox-frame">
+                <h2>Города Новой Зеландии</h2>
+                <div class="checkboxes">
+                    <div class="checkbox-item">
+                        <input type="radio" id="wellington" name="city" value="wellington">
+                        <label for="wellington">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">Веллингтон</span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="radio" id="tauranga" name="city" value="tauranga">
+                        <label for="tauranga">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">Тауранга</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Правый блок с информацией в рамке -->
+            <div class="info-frame">
+                <h2>Информация о городе</h2>
+                <div id="city-info" class="city-info">
+                    <div class="placeholder">
+                        <div class="placeholder-icon">🗺️</div>
+                        <p>Выберите город для отображения информации</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

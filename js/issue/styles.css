@@ -1,0 +1,193 @@
+/* Сброс отступов */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Основной фон страницы */
+body {
+    background-color: #e0e0e0; /* серый фон */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Контейнер всего содержимого */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Заголовок */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Основной контент в две колонки */
+.main-content {
+    display: flex;
+    gap: 20px;
+}
+
+/* Левый блок с чекбоксами */
+.checkbox-frame {
+    background-color: #c8e6c9; /* светло-зеленый */
+    border: 3px solid #4caf50; /* зеленый рамка */
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+/* Правый блок с информацией */
+.info-frame {
+    background-color: #bbdefb; /* светло-голубой */
+    border: 3px solid #2196f3; /* синий рамка */
+    padding: 20px;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+
+/* Заголовки в блоках */
+.checkbox-frame h2,
+.info-frame h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Контейнер для чекбоксов */
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Элемент чекбокса */
+.checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Скрываем стандартный чекбокс */
+.checkbox-item input[type="radio"] {
+    display: none;
+}
+
+/* Стили для метки чекбокса */
+.checkbox-item label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    width: 100%;
+}
+
+.checkbox-item label:hover {
+    background-color: #f0f0f0;
+}
+
+/* Кастомный чекбокс */
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+}
+
+/* Внутренняя точка для выбранного чекбокса */
+.checkbox-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    display: none;
+}
+
+/* Когда чекбокс выбран */
+.checkbox-item input[type="radio"]:checked + label .checkbox-custom::after {
+    display: block;
+}
+
+.checkbox-item input[type="radio"]:checked + label {
+    background-color: #e8f5e8;
+    border-color: #4caf50;
+}
+
+/* Текст чекбокса */
+.checkbox-text {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Блок с информацией о городе */
+.city-info {
+    min-height: 300px;
+}
+
+/* Плейсхолдер когда ничего не выбрано */
+.placeholder {
+    text-align: center;
+    padding: 50px 20px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Карточка города */
+.city-card h3 {
+    color: #2196f3;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #2196f3;
+    padding-bottom: 5px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.info-item p {
+    color: #555;
+}
+
+.facts-list {
+    margin-left: 20px;
+}
+
+.facts-list li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* На мобильных устройствах */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .checkbox-frame {
+        width: 100%;
+    }
+}
