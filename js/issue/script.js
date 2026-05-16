@@ -5,7 +5,7 @@ const cityInfoDiv = document.getElementById('city-info');
 // Функция для загрузки HTML файла города
 async function loadCityHTML(cityName) {
     try {
-        const response = await fetch(`cities/${cityName}.html`);
+        const response = await fetch(`data/${cityName}.html`);
         
         if (!response.ok) {
             throw new Error(`HTTP ошибка: ${response.status}`);
@@ -28,7 +28,7 @@ async function showCityInfo(cityName) {
             <div style="color: red; padding: 20px;">
                 <h3>Ошибка загрузки данных</h3>
                 <p>Не удалось загрузить информацию о городе "${cityName}"</p>
-                <p>Проверьте файл: cities/${cityName}.html</p>
+                <p>Проверьте файл: data/${cityName}.html</p>
             </div>
         `;
         return;
